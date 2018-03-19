@@ -1,20 +1,33 @@
 {
   "name": "agile-actors",
   "version": "1.0.0",
-  "description": "Agile Actor MultiRepo",
+  "description": "Agile Actors MultiRepo",
+  "private": true,
+  "workspaces": [
+    "agile-actors-actions",
+    "agile-actors-client",
+    "agile-actors-server"
+  ],
   "scripts": {
+    "clean": "rm -rf node_modules ./*/node_modules && rm -rf ./*/dist",
+    "build": "yarn run clean && yarn && meta git update && yarn && meta yarn link",
+    "build:actions": "cd ./agile-actors-actions && yarn build",
+    "start": "yarn build:actions && yarn start:client & yarn start:server & wait",
+    "start:client": "yarn build:actions && cd ./agile-actors-client && yarn start",
+    "start:server": "yarn build:actions && cd ./agile-actors-server && yarn start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kogal/agile-actors.git"
   },
   "author": "Agile Actors",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/kogal/agile-actors/issues"
   },
   "homepage": "https://github.com/kogal/agile-actors#readme",
-  "devDependencies": {
-    "metro": "0.30.2"
+  "dependencies": {
+    "meta-git": "0.0.32",
+    "meta-yarn": "0.0.4"
   }
 }
