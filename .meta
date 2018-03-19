@@ -1,7 +1,7 @@
 {
   "projects": {
-    "package/agile-actors-actions": "git@github.com:kogal/next-dot-actions.git",
-    "package/agile-actors-client": "git@github.com:kogal/agile-actor-x.git",
-    "package/agile-actors-server": "git@github.com:kogal/agile-actor.git"
+    "packages/agile-actors-actions": "git@github.com:kogal/next-dot-actions.git",
+    "packages/agile-actors-client": "git@github.com:kogal/agile-actor-x.git",
+    "packages/agile-actors-server": "git@github.com:kogal/agile-actor.git"
   }
 }

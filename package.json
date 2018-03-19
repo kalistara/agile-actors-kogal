@@ -7,12 +7,12 @@
     "packages/*"
   ],
   "scripts": {
-    "clean": "rm -rf node_modules ./*/node_modules && rm -rf ./*/dist",
-    "build": "yarn run clean && yarn && meta git update && yarn && meta yarn link",
-    "build:actions": "cd ./agile-actors-actions && yarn build",
-    "start": "yarn build:actions && yarn start:client & yarn start:server & wait",
-    "start:client": "yarn build:actions && cd ./agile-actors-client && yarn start",
-    "start:server": "yarn build:actions && cd ./agile-actors-server && yarn start"
+    "clean": "rm -rf node_modules packages/*/node_modules && rm -rf packages/*/dist",
+    "build": "yarn clean && yarn && meta git update && yarn && lerna link",
+    "build:actions": "yarn workspace @agile-actors/actions build",
+    "start": "lerna run start --parallel --stream",
+    "start:client": "ttab -t 'Agile Actors Client' 'lerna run start --scope @agile-actors/client --stream'",
+    "start:server": "ttab -t 'Agile Actors Server' 'lerna run start --scope @agile-actors/server --stream'"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/kogal/agile-actors#readme",
   "dependencies": {
+    "lerna": "2.9.0",
     "meta-git": "0.0.32",
-    "meta-yarn": "0.0.4"
+    "meta-yarn": "0.0.4",
+		"ttab": "0.6.1"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "lerna": "2.9.0",
+  "npmClient": "yarn",
+  "npmClientArgs": [
+    "--no-lockfile"
+  ],
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*"
+  ],
+  "commands": {
+    "init": {
+      "exact": true
+    }
+  },
+  "version": "1.0.0"
+}
