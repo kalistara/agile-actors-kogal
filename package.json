@@ -4,9 +4,7 @@
   "description": "Agile Actors MultiRepo",
   "private": true,
   "workspaces": [
-    "agile-actors-actions",
-    "agile-actors-client",
-    "agile-actors-server"
+    "packages/*"
   ],
   "scripts": {
     "clean": "rm -rf node_modules ./*/node_modules && rm -rf ./*/dist",

@@ -1,4 +1,4 @@
 node_modules
-agile-actors-actions
-agile-actors-client
-agile-actors-server
+packages/agile-actors-actions
+packages/agile-actors-client
+packages/agile-actors-server
