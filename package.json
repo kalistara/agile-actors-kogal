@@ -11,8 +11,8 @@
     "build": "yarn clean && yarn && meta git update && yarn && lerna link",
     "build:actions": "yarn workspace @agile-actors/actions build",
     "start": "lerna run start --parallel --stream",
-    "start:client": "ttab -t 'Agile Actors Client' 'lerna run start --scope @agile-actors/client --stream'",
-    "start:server": "ttab -t 'Agile Actors Server' 'lerna run start --scope @agile-actors/server --stream'"
+    "start:client": "lerna run start --scope @agile-actors/client --stream",
+    "start:server": "lerna run start --scope @agile-actors/server --stream"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,6 @@
   "homepage": "https://github.com/kogal/agile-actors#readme",
   "dependencies": {
     "lerna": "2.9.0",
-    "meta-git": "0.0.32",
-    "meta-yarn": "0.0.4",
-		"ttab": "0.6.1"
+    "meta-git": "0.0.32"
   }
 }
