@@ -2,7 +2,7 @@
 
 A single project to manage the various Agile Actors micro-services (repos).
 
-### Key technologies:
+## Key technologies:
 
   * Lerna (sub-projects management and linking)
   * Yarn workspaces (dependencies management)
