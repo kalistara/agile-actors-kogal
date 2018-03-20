@@ -29,13 +29,13 @@ yarn start:server
 
 ## Version control (git)
 
-1. Each of the folders under **packages/** is a git repo. You can add it to your favourite git client and handle it the way you would normally do.
+* Each of the folders under **packages/** is a git repo. You can add it to your favourite git client and handle it the way you would normally do.
 
- - agile-actors-actions -> `git@github.com:kogal/next-dot-actions.git`
- - agile-actors-client  -> `git@github.com:kogal/agile-actor-x.git`
- - agile-actors-server  -> `git@github.com:kogal/agile-actor.git`
+ 1. agile-actors-actions -> `git@github.com:kogal/next-dot-actions.git`
+ 2. agile-actors-client  -> `git@github.com:kogal/agile-actor-x.git`
+ 3. agile-actors-server  -> `git@github.com:kogal/agile-actor.git`
 
-2. From the terminal (handles all repos simultaneously):
+* From the terminal (handles all repos simultaneously):
 
 ```
 yarn git <command>
