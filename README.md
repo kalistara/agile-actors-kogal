@@ -1,6 +1,12 @@
-# agile-actors
+# Agile Actors MultiRepo as MonoRepo
 
-Agile Actors MultiRepo
+A single project to manage the various Agile Actors micro-services (repos).
+
+### Key technologies:
+
+  * Lerna (sub-projects management and linking)
+  * Yarn workspaces (dependencies management)
+  * Meta (git control)
 
 ## Build the project
 ```
