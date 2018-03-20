@@ -9,7 +9,6 @@
   "scripts": {
     "clean": "rm -rf node_modules packages/*/node_modules && rm -rf packages/*/dist",
     "build": "yarn clean && yarn && meta git update && yarn && lerna link",
-    "build:actions": "yarn workspace @agile-actors/actions build",
     "start": "lerna run start --parallel --stream",
     "start:client": "lerna run start --scope @agile-actors/client --stream",
     "start:server": "lerna run start --scope @agile-actors/server --stream"

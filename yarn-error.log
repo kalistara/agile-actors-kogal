@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/kostis/.nvm/versions/node/v9.3.0/bin/node /Users/kostis/.nvm/versions/node/v9.3.0/bin/yarn start
+  /Users/kostis/.nvm/versions/node/v9.3.0/bin/node /Users/kostis/.nvm/versions/node/v9.3.0/bin/yarn build
 
 PATH: 
   /Users/kostis/mongodb-osx-x86_64-enterprise-3.6.2/bin:/Users/kostis/.nvm/versions/node/v9.3.0/bin:/Users/kostis/.rvm/gems/ruby-2.3.0/bin:/Users/kostis/.rvm/gems/ruby-2.3.0@global/bin:/Users/kostis/.rvm/rubies/ruby-2.3.0/bin:/Users/kostis/mongodb-osx-x86_64-enterprise-3.6.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS/Users/kostis/.rvm/gems/ruby-2.3.0/bin:/Users/kostis/.rvm/gems/ruby-2.3.0@global/bin:/Users/kostis/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/kostis/Library/Android/sdk/tools:/Users/kostis/Library/Android/sdk/platform-tools:/Users/kostis/.rvm/bin:/usr/local/bin:/Users/kostis/Library/Android/sdk/tools:/Users/kostis/Library/Android/sdk/platform-tools:/Users/kostis/.rvm/bin:/usr/local/bin:/Users/kostis/Library/Android/sdk/tools:/Users/kostis/Library/Android/sdk/platform-tools:/Users/kostis/.rvm/bin:/usr/local/bin:/Users/kostis/Library/Android/sdk/tools:/Users/kostis/Library/Android/sdk/platform-tools
@@ -27,8 +27,8 @@ npm manifest:
       "build": "yarn clean && yarn && meta git update && yarn && lerna link",
       "build:actions": "yarn workspace @agile-actors/actions build",
       "start": "lerna run start --parallel --stream",
-      "start:client": "ttab -t 'Agile Actors Client' 'lerna run start --scope @agile-actors/client --stream'",
-      "start:server": "ttab -t 'Agile Actors Server' 'lerna run start --scope @agile-actors/server --stream'"
+      "start:client": "lerna run start --scope @agile-actors/client --stream",
+      "start:server": "lerna run start --scope @agile-actors/server --stream"
     },
     "repository": {
       "type": "git",
@@ -42,8 +42,7 @@ npm manifest:
     "homepage": "https://github.com/kogal/agile-actors#readme",
     "dependencies": {
       "lerna": "2.9.0",
-      "meta-git": "0.0.32",
-  		"ttab": "0.6.1"
+      "meta-git": "0.0.32"
     }
   }
 
@@ -12055,7 +12054,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c lerna run start --parallel --stream
+  Arguments: -c yarn clean && yarn && meta git update && yarn && lerna link
   Directory: /Users/kostis/Projects/agile-actors
   Output:
   
