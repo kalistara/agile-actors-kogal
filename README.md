@@ -5,7 +5,6 @@ Agile Actors MultiRepo
 ## Build the project
 ```
 yarn build
-
 ```
 
 ## Run locally
