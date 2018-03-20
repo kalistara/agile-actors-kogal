@@ -1,4 +1,4 @@
-# Agile Actors MultiRepo as MonoRepo
+# Agile Actors MultiRepos as MonoRepo
 
 A single project to manage the various Agile Actors micro-services (repos).
 
