@@ -2,7 +2,6 @@
   "name": "agile-actors",
   "version": "1.0.0",
   "description": "Agile Actors MultiRepo",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -12,7 +11,10 @@
     "build": "yarn clean && yarn && meta git update && yarn && lerna link",
     "start": "lerna run start --parallel --stream",
     "start:client": "lerna run start --scope @agile-actors/client --stream",
-    "start:server": "lerna run start --scope @agile-actors/server --stream"
+    "start:server": "lerna run start --scope @agile-actors/server --stream",
+    "publish": "lerna publish",
+    "prepublish": "mv .gitignore .gitignore_temp && mv .gitignore_publish .gitignore",
+    "postpublish": "mv .gitignore .gitignore_publish && mv .gitignore_temp .gitignore"
   },
   "repository": {
     "type": "git",

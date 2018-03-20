@@ -2,3 +2,5 @@ node_modules
 packages/agile-actors-actions
 packages/agile-actors-client
 packages/agile-actors-server
+lerna-debug.log
+yarn-error.json
