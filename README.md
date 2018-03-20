@@ -31,9 +31,9 @@ yarn start:server
 
 * Each of the folders under **packages/** is a git repo. You can add it to your favourite git client and handle it the way you would normally do.
 
- 1. agile-actors-actions -> `git@github.com:kogal/next-dot-actions.git`
- 2. agile-actors-client  -> `git@github.com:kogal/agile-actor-x.git`
- 3. agile-actors-server  -> `git@github.com:kogal/agile-actor.git`
+   1. agile-actors-actions -> `git@github.com:kogal/next-dot-actions.git`
+   2. agile-actors-client  -> `git@github.com:kogal/agile-actor-x.git`
+   3. agile-actors-server  -> `git@github.com:kogal/agile-actor.git`
 
 * From the terminal (handles all repos simultaneously):
 
