@@ -1,0 +1,75 @@
+{
+  "name": "@agile-actors/actions",
+  "version": "1.0.0",
+  "description": "All actions that will be provided on Agile Actor client and server",
+  "engines": {
+    "node": ">=9.0.0",
+    "npm": ">=5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kogal/next-dot-actions"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint ./src",
+    "test": "jest",
+    "clean:dist": "rm -rf dist",
+    "clean:compiled": "rm -rf csrc",
+    "compile": "babel src --out-dir csrc",
+    "create:dist": "cp -r csrc dist && rm -rf dist/**/**/__tests__",
+    "build:schemas": "rm -rf dist/schemas/** && node csrc/schemas/build",
+    "build": "npm run clean:dist && npm run compile && npm run create:dist && npm run build:schemas && npm run clean:compiled && node dist/js/testActionCreation.js",
+    "postinstall": "npm run build"
+  },
+  "pre-push": [
+    "lint",
+    "build"
+  ],
+  "author": "Agile Actors",
+  "license": "UNLICENSED",
+  "keywords": [
+    "nodejs",
+    "actions",
+    "json-schema"
+  ],
+  "jest": {
+    "verbose": true
+  },
+  "dependencies": {
+    "ajv": "5.5.2",
+    "babel-cli": "7.0.0-beta.3",
+    "babel-core": "7.0.0-beta.3",
+    "babel-eslint": "8.2.2",
+    "babel-jest": "22.4.1",
+    "babel-plugin-module-alias": "1.6.0",
+    "babel-polyfill": "7.0.0-beta.3",
+    "babel-preset-env": "2.0.0-beta.2",
+    "babel-preset-es2016-node5": "1.1.2",
+    "babel-preset-stage-0": "7.0.0-beta.3",
+    "eslint": "4.19.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-config-standard": "11.0.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-promise": "3.6.0",
+    "eslint-plugin-standard": "3.0.1",
+    "jest": "22.4.2",
+    "jest-cli": "22.4.2",
+    "joi": "13.1.0",
+    "joi-to-json-schema": "3.2.0",
+    "lodash": "4.17.5",
+    "pre-push": "0.1.1",
+    "prettier": "1.11.1",
+    "prettier-eslint": "8.7.1"
+  }
+}
