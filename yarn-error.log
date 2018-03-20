@@ -23,9 +23,9 @@ npm manifest:
       "packages/*"
     ],
     "scripts": {
+      "git": "meta git",
       "clean": "rm -rf node_modules packages/*/node_modules && rm -rf packages/*/dist",
       "build": "yarn clean && yarn && meta git update && yarn && lerna link",
-      "build:actions": "yarn workspace @agile-actors/actions build",
       "start": "lerna run start --parallel --stream",
       "start:client": "lerna run start --scope @agile-actors/client --stream",
       "start:server": "lerna run start --scope @agile-actors/server --stream"
@@ -7715,13 +7715,6 @@ Lockfile:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
   
-  meta-exec@0.0.0:
-    version "0.0.0"
-    resolved "https://registry.yarnpkg.com/meta-exec/-/meta-exec-0.0.0.tgz#322723de04ff07d35a45312c79d3b1016a81e8eb"
-    dependencies:
-      chalk "^1.1.3"
-      debug "^2.6.0"
-  
   meta-exec@^0.0.7:
     version "0.0.7"
     resolved "https://registry.yarnpkg.com/meta-exec/-/meta-exec-0.0.7.tgz#33ae802fe996d27e71413aeb56782a19e3576b7f"
@@ -7749,19 +7742,6 @@ Lockfile:
       debug "^2.6.3"
       get-meta-file "^0.0.5"
       loop "^3.0.1"
-  
-  meta-yarn@0.0.4:
-    version "0.0.4"
-    resolved "https://registry.yarnpkg.com/meta-yarn/-/meta-yarn-0.0.4.tgz#a30d5db1348076b45683edf5ceb66cea8f45b4df"
-    dependencies:
-      async "^2.1.4"
-      chalk "^1.1.3"
-      commander "^2.9.0"
-      debug "^2.3.3"
-      get-meta-file "^0.0.5"
-      lodash "^4.17.4"
-      loop "^3.0.2"
-      meta-exec "0.0.0"
   
   methods@^1.0.1:
     version "1.1.2"
@@ -11194,10 +11174,6 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   
-  ttab@0.6.1:
-    version "0.6.1"
-    resolved "https://registry.yarnpkg.com/ttab/-/ttab-0.6.1.tgz#72001a333d477a92c49f6cb0e83ae07984c66be5"
-  
   tty-browserify@0.0.0:
     version "0.0.0"
     resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
@@ -12052,7 +12028,7 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 127
   Command: sh
   Arguments: -c yarn clean && yarn && meta git update && yarn && lerna link
   Directory: /Users/kostis/Projects/agile-actors
